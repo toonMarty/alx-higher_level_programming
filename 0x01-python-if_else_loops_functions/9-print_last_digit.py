@@ -9,4 +9,4 @@ def print_last_digit(number):
     if a < 0:
         a = -a
 
-    print(a)
+    return a
