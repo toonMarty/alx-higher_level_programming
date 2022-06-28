@@ -21,4 +21,4 @@ elif las < 6 and las != 0:
 elif las == 0:
     print(f'Last digit of {number} is {las} and is 0')
 else:
-    TypeError
+    raise TypeError("TypeError")
