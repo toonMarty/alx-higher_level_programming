@@ -18,5 +18,7 @@ elif las < 6 and las != 0:
     elif number > 0:
         print(f'Last digit of {number} is {las} and is less than 6 and not 0')
 
-else:
+elif las == 0:
     print(f'Last digit of {number} is {las} and is 0')
+else:
+    TypeError
