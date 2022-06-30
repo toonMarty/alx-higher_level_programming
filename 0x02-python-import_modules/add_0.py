@@ -11,4 +11,7 @@ def add(a, b):
     """
     return (a + b)
 if __name__ == "__main__":
-    add()
+    add(1, 2)
+import add_0
+ 
+add_0.add(1, 2)
