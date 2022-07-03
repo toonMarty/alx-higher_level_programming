@@ -8,13 +8,17 @@ if __name__ == '__main__':
         exit(1)
     else:
         if sys.argv[2] == '+':
-            print(f'{sys.argv[1]} {sys.argv[2]} {sys.argv[3]} = {add(int(sys.argv[1]), int(sys.argv[3]))}')
+            print(f'{sys.argv[1]} {sys.argv[2]} '
+                  f'{sys.argv[3]} = {add(int(sys.argv[1]), int(sys.argv[3]))}')
         elif sys.argv[2] == '*':
-            print(f'{sys.argv[1]} {sys.argv[2]} {sys.argv[3]} = {mul(int(sys.argv[1]), int(sys.argv[3]))}')
+            print(f'{sys.argv[1]} {sys.argv[2]} '
+                  f'{sys.argv[3]} = {mul(int(sys.argv[1]), int(sys.argv[3]))}')
         elif sys.argv[2] == '-':
-            print(f'{sys.argv[1]} {sys.argv[2]} {sys.argv[3]} = {sub(int(sys.argv[1]), int(sys.argv[3]))}')
+            print(f'{sys.argv[1]} {sys.argv[2]} '
+                  f'{sys.argv[3]} = {sub(int(sys.argv[1]), int(sys.argv[3]))}')
         elif sys.argv[2] == '/':
-            print(f'{sys.argv[1]} {sys.argv[2]} {sys.argv[3]} = {div(int(sys.argv[1]), int(sys.argv[3]))}')
+            print(f'{sys.argv[1]} {sys.argv[2]} '
+                  f'{sys.argv[3]} = {div(int(sys.argv[1]), int(sys.argv[3]))}')
         else:
             print('Unknown operator. Available operators are *,+, /, -')
             exit(1)
