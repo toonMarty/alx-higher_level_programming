@@ -1,6 +1,4 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    for i in range(len(matrix)):
-        print('{:d}'.format(matrix[i]).replace(',', '', 1000000).
-              replace('[', '', 1000000).
-              replace(']', '', 1000000))
+    x = '\n'.join([''.join(['{:d} '.format(item) for item in row]) for row in matrix])
+    print(x)
