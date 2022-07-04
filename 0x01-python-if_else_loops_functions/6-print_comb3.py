@@ -5,4 +5,4 @@ for n in range(48, 57):
             print('{}{}'.format(chr(n), chr(m)), end='')
             if n != 56 or m != 57:
                 print(f', ', end='')
-print('\n')
+print(end='')
