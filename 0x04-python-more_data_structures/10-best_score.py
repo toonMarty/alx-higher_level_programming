@@ -9,4 +9,3 @@ def best_score(a_dictionary):
         for key in a_dictionary:
             if a == a_dictionary[key]:
                 return key
-
