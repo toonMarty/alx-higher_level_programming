@@ -1,7 +1,7 @@
 Exception handling tasks
 Task 0: print list safely using exceptions
 Task 1: print integer safely using exceptions
-Task 2:
+Task 2: A function that prints x elements of a list and only integers
 Task 3:
 Task 5: A function that raises a type exception
 Task 6: Raise a name exception with a message
