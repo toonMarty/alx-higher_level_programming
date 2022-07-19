@@ -9,6 +9,8 @@
 
 
 class Square:
+    """A class that defines a square with setters and getters
+    """
     def __init__(self, __size=0):
         """This method initializes by passing
             initial values to the square object
@@ -36,14 +38,17 @@ class Square:
 
     @property
     def size(self):
-        """gets the size of the square"""
+        """
+        gets the size of the square
+        sets the size of the square
+        checks the value and raises appropriate exceptions
+        Returns:
+            int: value of size
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """sets the size of the square
-            checks the value and raises appropriate exceptions
-        """
         self.__size = value
 
         if not isinstance(value, int):
