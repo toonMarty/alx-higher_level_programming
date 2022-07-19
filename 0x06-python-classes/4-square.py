@@ -41,6 +41,9 @@ class Square:
 
     @size.setter
     def size(self, value):
+        """sets the size of the square
+            checks the value and raises appropriate exceptions
+        """
         self.__size = value
 
         if not isinstance(value, int):
