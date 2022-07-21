@@ -26,8 +26,16 @@ class Square:
                 __size: size of square
         """
         self.__size = __size
-        self.__first = __position[0]
-        self.__second = __position[1]
+        self.__position = __position
+
+        for i in range(len(self.__position)):
+            if not isinstance(__position[i], int) or __position[i] < 0:
+                raise TypeError('position must be a tuple of 2 positive '
+                                'integers')
+
+        if len(__position) != 2:
+            raise TypeError('position must be a tuple of 2 positive '
+                            'integers')
 
     @property
     def size(self):
@@ -58,16 +66,12 @@ class Square:
         Returns:
             int: value of size
         """
-        return self.__first, self.__second
+        return self.__position
 
     @size.setter
     def size(self, value):
-        self.__first = value
-        self.__second = value
-
-        if not isinstance(value, int):
-            raise TypeError('position must be a tuple of 2 positive '
-                            'integers')
+        for i in range(len(self.__position)):
+            self.__position = value
 
     def area(self):
         """
@@ -84,17 +88,17 @@ class Square:
             nothing
         """
         for i in range(self.__size):
+            if self.__position[1] > 0:
+                print(' ', end='')
+            elif self.__position == (0, 0):
+                print(end='')
+            else:
+                for m in range(len(self.__position)):
+                    for n in range(len(self.__position)):
+                        print(' ', end='')
             for j in range(self.__size):
                 print('#', end='')
             print('')
 
         if self.__size == 0:
-            print(' ')
-
-        for i in range(self.__first):
-            for j in range(self.__second):
-                if self.__second > 0:
-                    print('_', end='')
-                else:
-                    print()
-            print('')
+            print()
