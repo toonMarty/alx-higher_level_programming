@@ -51,7 +51,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ''
         if isinstance(self.print_symbol, (list, tuple, dict)):
-            my_list = [self.print_symbol *
+            my_list = [[self.print_symbol] *
                        self.__width for _ in range(self.__height)]
             return '\n'.join(map(str, my_list))
 
