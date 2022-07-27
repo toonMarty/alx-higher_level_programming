@@ -73,7 +73,7 @@ class Rectangle:
             nothing
         """
         Rectangle.number_of_instances -= 1
-        print('Bye Rectangle ...')
+        print('Bye rectangle...')
 
     @property
     def width(self):
