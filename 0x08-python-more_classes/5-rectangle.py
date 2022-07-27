@@ -62,7 +62,7 @@ class Rectangle:
         Returns:
             nothing
         """
-        print(str('Bye Rectangle ...'))
+        print('Bye Rectangle...')
 
     @property
     def width(self):
