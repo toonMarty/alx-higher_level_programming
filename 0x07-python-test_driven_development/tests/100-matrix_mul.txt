@@ -1,0 +1,53 @@
+The ``100-matrix_mul`` module
+================================================
+
+Using ``matrix_mul``
+-------------------------------------------------
+
+This is a 100-matrix_mul test file in restructuredTextFormat. First import
+``matrix_mul`` from the ``100-matrix_mul`` module:
+
+    Test case 0: importing the module
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Now use it:
+    Test case 1: multiplying two matrices
+    >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+    [[7, 10], [15, 22]]
+
+    Test case 2: multiplying when m_a or m_b is not a list
+    >>> matrix_mul(([1, 2], [3, 4]), [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a must be a list
+
+    Test case 3: multiplying where m_a or m_b does not contain a list of lists
+    >>> matrix_mul([(1, 2), [3, 4]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a must be a list of lists
+
+    Test case 4: len of m_a or m_b is zero.
+    >>> matrix_mul([[1, 2]], [[]])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_b can't be empty
+
+    Test case 4b: len of m_a or m_b is zero
+    >>> matrix_mul([[1, 2]], [])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_b can't be empty
+
+    Test case 5: elements of inner lists are not int or float
+    >>> matrix_mul([['1', 2]], [[1, 2]])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a should contain only integers or floats
+
+    Test case 6: Rows not being the same size
+    >>> matrix_mul([[1, 2]], [[2, 1], [3, 4, 5]])
+    Traceback (most recent call last):
+        ...
+    TypeError: each row of m_b must be of the same size
+

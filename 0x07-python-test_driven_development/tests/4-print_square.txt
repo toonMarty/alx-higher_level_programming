@@ -1,0 +1,37 @@
+The ``4-print_square.py`` module
+===================================================
+
+Using ``print_square``
+---------------------------------------------------
+This is a 4-print_square test file in restructuredTextFormat. First import
+``print_square`` from the ``4-print_square`` module:
+
+    Test case 0: importing the module
+    >>> print_square = __import__('4-print_square').print_square
+
+Now use it:
+    Test case 1: printing a square where size is an int
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    Test case 2: printing a square whose size is a float
+    >>> print_square(2.5)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+    Test case 3: printing a square whose size is < 0
+    >>> print_square(-1)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+    Test case 4: printing a square whose size is < 0 and type float
+    >>> print_square(-1.0)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+

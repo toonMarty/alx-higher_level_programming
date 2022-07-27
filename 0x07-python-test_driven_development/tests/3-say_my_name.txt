@@ -1,0 +1,57 @@
+The ``3-say_my_name`` module
+=================================================
+
+Using ``3-say_my_name``
+-------------------------------------------------
+
+This is the 3-say_my_name test file in restructuredTextFormat. First import
+``say_my_name`` from the ``3-say_my_name`` module:
+
+    Test case 0: importing the module
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now Use it:
+    Test case 1: printing first and last names being strings
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+    Test case 2: Print name without last name
+    >>> say_my_name("Bob")  #doctest: +NORMALIZE_WHITESPACE
+    My name is Bob
+
+    Test case 3: print name where first_name is not a string
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    Test case 4: print name where last_name is not a string
+    >>> say_my_name("White", 12)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    Test case 5: print name with no first_name supplied
+    >>> say_my_name('', "White")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name cannot be empty
+
+    Test case 6: print name with first_name supplied as an empty string
+    >>> say_my_name(' ', "White")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name cannot be an empty string
+
+    Test case 7: print name with first_name not being a sequence of alphabets
+    >>> say_my_name('$$$$%%%%&&**()', 'White')
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name can only be a sequence of ASCII alphabet characters
+
+    Test case 8: print name with last_name not being a sequence of alphabets
+    >>> say_my_name('White', '$$$$%%%%&&**()')
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name can only be a sequence of ASCII alphabet characters
+

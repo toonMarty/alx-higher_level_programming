@@ -1,0 +1,20 @@
+The ``5-text_indentation`` module
+====================================================
+
+Using ``text_indentation``
+----------------------------------------------------
+
+This is a 5-text_indentation test file in restructuredTextFormat. First import
+``text_indentation`` from the 5-text_indentation module:
+
+    Test case 0: importing the module\
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+    Test case 1: Trying to print a non-string value
+    >>> text_indentation([1, 2, 3])
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
