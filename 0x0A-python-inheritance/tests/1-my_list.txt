@@ -1,0 +1,42 @@
+The ``1-my_list.txt`` module
+==============================================
+
+Using ``print_sorted``
+----------------------------------------------
+
+This is a 1-my_list test file in restructuredTextFormat. First import
+``print_sorted`` from the ``1-my_list`` module:
+
+    Test case 0: importing the module
+    >>> MyList = __import__('1-my_list').MyList
+
+Now use it:
+    Test case 1: printing list in sorted order
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+    Test case 2: printing a list with a non-integer element
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append('3')
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, '3', 5]
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+        ...
+    TypeError: elements should be of type int
+    >>> print(my_list)
+    [1, 4, 2, '3', 5]
