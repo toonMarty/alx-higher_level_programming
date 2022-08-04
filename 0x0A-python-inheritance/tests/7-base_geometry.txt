@@ -42,3 +42,25 @@ Now use it:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     ...
     [ValueError] distance must be greater than 0
+
+    Test case 5: value is a string
+    >>> bg = BaseGeometry()
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int", '12')
+    Traceback (most recent call last):
+        ...
+    TypeError: my_int must be an integer
+
+    Test case 6: value is 0
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int", 0)
+    Traceback (most recent call last):
+        ...
+    ValueError: my_int must be greater than 0
+
+    Test case 7: value is less than 0
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int", -4)
+    Traceback (most recent call last):
+        ...
+    ValueError: my_int must be greater than 0
