@@ -18,47 +18,20 @@ Now use it:
 
     Test case 2: value is a string
     >>> bg = BaseGeometry()
-    >>> try:
-    ...     bg.integer_validator("name", "John")
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    ...
-    [TypeError] name must be an integer
-
-    Test case 3: value is 0
-    >>> bg = BaseGeometry()
-    >>> try:
-    ...     bg.integer_validator("age", 0)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    ...
-    [ValueError] age must be greater than 0
-
-    Test case 4: value is less than 0
-    >>> bg = BaseGeometry()
-    >>> try:
-    ...     bg.integer_validator("distance", -4)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    ...
-    [ValueError] distance must be greater than 0
-
-    Test case 5: value is a string
-    >>> bg = BaseGeometry()
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("my_int", '12')
     Traceback (most recent call last):
         ...
     TypeError: my_int must be an integer
 
-    Test case 6: value is 0
+    Test case 3: value is 0
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("my_int", 0)
     Traceback (most recent call last):
         ...
     ValueError: my_int must be greater than 0
 
-    Test case 7: value is less than 0
+    Test case 4: value is less than 0
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("my_int", -4)
     Traceback (most recent call last):
