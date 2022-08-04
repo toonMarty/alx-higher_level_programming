@@ -14,7 +14,6 @@ class BaseGeometry:
         """
         raise Exception('area() is not implemented')
 
-    @staticmethod
     def integer_validator(name, value):
         """
         This method validates integers and raises
