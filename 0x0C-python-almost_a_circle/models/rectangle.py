@@ -146,4 +146,9 @@ class Rectangle(Base):
                f'{self.__width}/{self.__height}'
 
     def update(self, *args):
+        """
+        This method updates attributes using args
+        Args:
+            args: the variable length arguments
+        """
         self.id = args[0]
