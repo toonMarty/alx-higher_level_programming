@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS cities
         name VARCHAR(256) NOT NULL,
         state_id INTEGER NOT NULL,
         CONSTRAINT prim_cities PRIMARY KEY(id),
-        CONSTRAINT foreign_cities FOREIGN KEY(state_id) REFERENCES states(id)
+        CONSTRAINT cities_ibfk_1 FOREIGN KEY(state_id) REFERENCES states(id)
 )ENGINE=InnoDB;
