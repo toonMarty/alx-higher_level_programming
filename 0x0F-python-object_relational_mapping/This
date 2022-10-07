@@ -1,5 +1,4 @@
-"""This module contains a script that filters
-    all states with a name starting with N
+ll states with a name starting with N
     from the database hbtn_0e_0_usa
 """
 if __name__ == '__main__':
