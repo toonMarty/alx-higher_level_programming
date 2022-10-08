@@ -12,7 +12,7 @@ if __name__ == '__main__':
                          user=sys.argv[1], passwd=sys.argv[2])
     cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE name = '{}'"
-                "ORDER BY states.id ASC".format(sys.argv[4])
+                "ORDER BY states.id ASC".format(sys.argv[4]))
     results = cur.fetchall()
 
     for result in results:
