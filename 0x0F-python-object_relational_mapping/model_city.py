@@ -1,4 +1,4 @@
-#!/usr/bin/pytohn3
+#!/usr/bin/python3
 """
 This module contains the class definition of a city and an
 instance Base
@@ -19,3 +19,4 @@ class City(Base):
                 nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
+
