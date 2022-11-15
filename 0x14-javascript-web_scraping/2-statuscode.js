@@ -1,11 +1,5 @@
 #!/usr/bin/node
-async function getStatusCode () {
-  const requestURL = process.argv[2];
-  const request = new Request(requestURL);
-  const response = await fetch(request);
-  const statusCode = response.status;
-
-  console.log('code: ', statusCode);
-}
-
-getStatusCode();
+const request = require('request');
+request.get(process.argv[2]).on('response', function (response) {
+  console.log(`code: ${response.statusCode}`);
+});
