@@ -1,5 +1,5 @@
 #!/usr/bin/node
-Error.stackTraceLimit = 0
+Error.stackTraceLimit = 0;
 
 try {
   const fs = require('fs'); // Load the fs API
