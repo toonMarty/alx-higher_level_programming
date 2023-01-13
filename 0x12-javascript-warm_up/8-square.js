@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 const sqr = process.argv[2];
 if (isNaN(sqr)) {
   console.log('Missing size');
