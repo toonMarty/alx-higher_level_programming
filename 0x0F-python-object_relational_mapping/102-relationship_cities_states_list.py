@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""lists all State objects, and corresponding City objects,
-contained in the database"""
+"""lists all City objects from the database"""
 
 if __name__ == "__main__":
     import sys
@@ -12,13 +11,12 @@ if __name__ == "__main__":
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(sys.argv[1], sys.argv[2],
-                                   sys.argv[3], pool_pre_ping=True))
-
+                                   sys.argv[3], pool_pre_pin=True))
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    for state in session.query(State).order_by(State.id).all():
-        print("{}: {}".format(state.id, state.name))
-        for city in state.cities:
-            print("     {}: {}".format(city.id, city.name))
+
+    for city in session.query(City).order_by(City.id).all():
+        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
     session.close()
+
